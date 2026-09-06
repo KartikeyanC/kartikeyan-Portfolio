@@ -63,7 +63,7 @@ export default function ProjectCard({
           : undefined
       }
       className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-base-soft"
-      data-cursor="hover"
+      data-cursor={isExternal ? "Go ↗" : "View"}
     >
       <div className="relative aspect-[4/3] overflow-hidden">
         <motion.div

@@ -72,7 +72,7 @@ export default function Contact() {
             </Reveal>
 
             <Reveal delay={0.35}>
-              <a href={`mailto:${site.email}`} className="link-underline mt-8 inline-block text-ink-muted">
+              <a href={`mailto:${site.email}`} data-cursor="Let's talk" className="link-underline mt-8 inline-block text-ink-muted">
                 {site.email}
               </a>
             </Reveal>

@@ -68,6 +68,7 @@ export default function Nav() {
                 href={site.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-cursor="Download"
                 className="link-underline text-sm text-ink-muted transition-colors hover:text-ink"
               >
                 Resume

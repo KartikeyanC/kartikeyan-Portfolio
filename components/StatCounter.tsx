@@ -32,11 +32,11 @@ export default function StatCounter({ stat }: { stat: Stat }) {
 
   return (
     <div ref={ref}>
-      <div className="font-display text-[clamp(2.5rem,5vw,3.75rem)] font-semibold leading-none tracking-tight text-ink">
+      <div className="font-display text-[clamp(2.5rem,5vw,3.75rem)] font-semibold leading-none tracking-tight text-text">
         {value}
         {stat.suffix ?? ""}
       </div>
-      <div className="mt-3 text-sm text-ink-muted">{stat.label}</div>
+      <div className="mt-3 text-sm text-text-secondary">{stat.label}</div>
     </div>
   );
 }

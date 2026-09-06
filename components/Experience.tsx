@@ -18,7 +18,7 @@ export default function Experience() {
       <div className="container-editorial">
         <Reveal className="max-w-2xl">
           <p className="eyebrow">Experience</p>
-          <h2 className="mt-4 font-display text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-tight tracking-[-0.02em] text-ink">
+          <h2 className="mt-4 font-display text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-tight tracking-[-0.02em] text-text">
             A decade of shipping.
           </h2>
         </Reveal>
@@ -26,7 +26,7 @@ export default function Experience() {
         <div ref={containerRef} className="relative mt-16 pl-8 sm:pl-0">
           <div className="absolute left-2 top-2 h-full w-px bg-white/10 sm:left-[7.5rem]" />
           <motion.div
-            className="absolute left-2 top-2 w-px origin-top bg-accent sm:left-[7.5rem]"
+            className="absolute left-2 top-2 w-px origin-top bg-orange sm:left-[7.5rem]"
             style={{ scaleY: lineScale, height: "100%" }}
           />
 
@@ -40,13 +40,13 @@ export default function Experience() {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               >
-                <span className="absolute -left-[1.55rem] top-1.5 h-3 w-3 rounded-full border-2 border-accent bg-base sm:left-[6.95rem]" />
+                <span className="absolute -left-[1.55rem] top-1.5 h-3 w-3 rounded-full border-2 border-accent bg-bg sm:left-[6.95rem]" />
 
-                <div className="text-sm font-medium text-ink-faint sm:text-right">{item.period}</div>
+                <div className="text-sm font-medium text-text-muted sm:text-right">{item.period}</div>
                 <div className="mt-1 sm:mt-0">
-                  <h3 className="font-display text-xl font-semibold text-ink">{item.role}</h3>
-                  <div className="mt-0.5 text-accent">{item.company}</div>
-                  <p className="mt-3 max-w-xl leading-relaxed text-ink-muted">{item.description}</p>
+                  <h3 className="font-display text-xl font-semibold text-text">{item.role}</h3>
+                  <div className="mt-0.5 text-orange">{item.company}</div>
+                  <p className="mt-3 max-w-xl leading-relaxed text-text-secondary">{item.description}</p>
                 </div>
               </motion.li>
             ))}

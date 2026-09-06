@@ -15,7 +15,7 @@ export default function Testimonials() {
       <div className="container-editorial">
         <Reveal className="max-w-2xl">
           <p className="eyebrow">Kind words</p>
-          <h2 className="mt-4 font-display text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-tight tracking-[-0.02em] text-ink">
+          <h2 className="mt-4 font-display text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-tight tracking-[-0.02em] text-text">
             People I&apos;ve built with.
           </h2>
         </Reveal>
@@ -29,15 +29,15 @@ export default function Testimonials() {
           {items.map((t, i) => (
             <figure
               key={i}
-              className="flex w-[85vw] max-w-md shrink-0 flex-col justify-between rounded-3xl border border-white/10 bg-base-soft p-8 sm:w-[26rem]"
+              className="flex w-[85vw] max-w-md shrink-0 flex-col justify-between rounded-3xl border border-border bg-surface p-8 sm:w-[26rem]"
               aria-hidden={i >= testimonials.length ? "true" : undefined}
             >
-              <blockquote className="font-display text-xl leading-relaxed text-ink">
+              <blockquote className="font-display text-xl leading-relaxed text-text">
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
               <figcaption className="mt-8">
-                <div className="font-medium text-ink">{t.author}</div>
-                <div className="text-sm text-ink-muted">{t.title}</div>
+                <div className="font-medium text-text">{t.author}</div>
+                <div className="text-sm text-text-secondary">{t.title}</div>
               </figcaption>
             </figure>
           ))}

@@ -6,7 +6,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/10 py-14">
+    <footer className="border-t border-border py-14">
       <div className="container-editorial">
         <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
           <div className="max-w-xs">
@@ -16,20 +16,20 @@ export default function Footer() {
               </span>
               <span className="font-medium">{site.name}</span>
             </div>
-            <p className="mt-4 text-sm leading-relaxed text-ink-muted">
+            <p className="mt-4 text-sm leading-relaxed text-text-secondary">
               {site.role} · {site.location}
             </p>
           </div>
 
           <div className="flex gap-14">
             <div>
-              <h3 className="text-xs font-medium uppercase tracking-[0.18em] text-ink-faint">Navigate</h3>
+              <h3 className="text-xs font-medium uppercase tracking-[0.18em] text-text-muted">Navigate</h3>
               <ul className="mt-4 space-y-2.5">
                 {nav.map((item) => (
                   <li key={item.href}>
                     <a
                       href={item.href}
-                      className="link-underline text-sm text-ink-muted transition-colors hover:text-ink"
+                      className="link-underline text-sm text-text-secondary transition-colors hover:text-text"
                     >
                       {item.label}
                     </a>
@@ -39,7 +39,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="text-xs font-medium uppercase tracking-[0.18em] text-ink-faint">Elsewhere</h3>
+              <h3 className="text-xs font-medium uppercase tracking-[0.18em] text-text-muted">Elsewhere</h3>
               <ul className="mt-4 space-y-2.5">
                 {site.socials.map((social) => (
                   <li key={social.label}>
@@ -47,7 +47,7 @@ export default function Footer() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group inline-flex items-center gap-1.5 text-sm text-ink-muted transition-colors hover:text-accent"
+                      className="group inline-flex items-center gap-1.5 text-sm text-text-secondary transition-colors hover:text-orange"
                     >
                       <span className="link-underline">{social.label}</span>
                       <span
@@ -64,14 +64,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-8 text-sm text-ink-faint sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-14 flex flex-col gap-3 border-t border-border pt-8 text-sm text-text-muted sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {year} {site.name}. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="link-underline transition-colors hover:text-ink-muted">Privacy</a>
-            <a href="#" className="link-underline transition-colors hover:text-ink-muted">Imprint</a>
-            <a href="#top" className="link-underline transition-colors hover:text-ink-muted">Back to top ↑</a>
+            <a href="#" className="link-underline transition-colors hover:text-text-secondary">Privacy</a>
+            <a href="#" className="link-underline transition-colors hover:text-text-secondary">Imprint</a>
+            <a href="#top" className="link-underline transition-colors hover:text-text-secondary">Back to top ↑</a>
           </div>
         </div>
       </div>

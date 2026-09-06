@@ -24,7 +24,7 @@ export default function ParallaxBackground() {
     >
       <motion.div
         style={{ y: reduced ? 0 : y1 }}
-        className="absolute -right-40 top-[10%] h-[420px] w-[420px] rounded-full bg-accent/[0.07] blur-[130px]"
+        className="absolute -right-40 top-[10%] h-[420px] w-[420px] rounded-full bg-orange/[0.07] blur-[130px]"
       />
       <motion.div
         style={{ y: reduced ? 0 : y2 }}

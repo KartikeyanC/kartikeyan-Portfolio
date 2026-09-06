@@ -37,7 +37,7 @@ function Cell({
 
 export default function PlaygroundPage() {
   return (
-    <main className="min-h-[100svh]">
+    <main id="main-content" className="min-h-[100svh]">
       <header className="fixed inset-x-0 top-0 z-[120] border-b border-border bg-bg/70 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 sm:px-8">
           <Link

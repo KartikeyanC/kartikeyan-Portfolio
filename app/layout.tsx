@@ -15,7 +15,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://alexmorgan.design"),
+  metadataBase: new URL("https://karthikeyan.design"),
   title: `${site.name} — ${site.role}`,
   description: `${site.name} is a ${site.role.toLowerCase()} turning fuzzy problems into interfaces people actually finish.`,
   openGraph: {
@@ -39,6 +39,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={poppins.variable}>
       <body>
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
         <Preloader />
         <SmoothScroll />
         <CustomCursor />

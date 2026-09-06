@@ -53,7 +53,7 @@ export default function CaseStudy({ project }: { project: Project }) {
         </div>
       </header>
 
-      <main className="pb-24">
+      <main id="main-content" className="pb-24">
         {/* Hero */}
         <section className="container-editorial pt-32">
           <div className="flex flex-wrap items-center gap-3">

@@ -17,16 +17,16 @@ function FaqRow({
   onToggle: () => void;
 }) {
   return (
-    <div className="border-b border-white/10">
+    <div className="border-b border-border">
       <button
         type="button"
         onClick={onToggle}
         className="flex w-full items-center justify-between gap-6 py-6 text-left"
         aria-expanded={open}
       >
-        <span className="font-display text-lg font-medium text-ink sm:text-xl">{q}</span>
+        <span className="font-display text-lg font-medium text-text sm:text-xl">{q}</span>
         <motion.span
-          className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 text-ink"
+          className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 text-text"
           animate={{ rotate: open ? 45 : 0 }}
           transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
           aria-hidden="true"
@@ -46,7 +46,7 @@ function FaqRow({
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden"
           >
-            <p className="max-w-2xl pb-6 leading-relaxed text-ink-muted">{a}</p>
+            <p className="max-w-2xl pb-6 leading-relaxed text-text-secondary">{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -63,7 +63,7 @@ export default function FAQ() {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <Reveal className="lg:col-span-4">
             <p className="eyebrow">FAQ</p>
-            <h2 className="mt-4 font-display text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-tight tracking-[-0.02em] text-ink">
+            <h2 className="mt-4 font-display text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-tight tracking-[-0.02em] text-text">
               Good questions.
             </h2>
           </Reveal>

@@ -23,7 +23,7 @@ export default function Home() {
     <>
       <ParallaxBackground />
       <Nav />
-      <main>
+      <main id="main-content">
         <Hero />
         <ProjectGrid />
         <Disciplines />

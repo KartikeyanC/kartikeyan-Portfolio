@@ -124,6 +124,22 @@ export const services: string[] = [
   "Digital Product Consulting",
 ];
 
+// AI workflow — AI as an accelerator; human judgment stays central.
+export type WorkflowStep = { title: string; note: string; ai?: boolean };
+
+export const aiWorkflow: WorkflowStep[] = [
+  { title: "Research", note: "Interviews, data, and the real jobs to be done." },
+  { title: "AI-Assisted Synthesis", note: "Cluster and summarize findings fast.", ai: true },
+  { title: "Human Insight", note: "The judgment call AI can't make.", },
+  { title: "Ideation", note: "Diverge wide before converging." },
+  { title: "Wireframe", note: "Structure and flow before pixels." },
+  { title: "UI Design", note: "Craft, systems, and state coverage." },
+  { title: "Prototype", note: "Make it real enough to test.", ai: true },
+  { title: "Testing", note: "Watch people actually use it." },
+  { title: "Iteration", note: "Sharpen against what you learned." },
+  { title: "Final Product", note: "Shipped, measured, and maintained." },
+];
+
 // Sticky storytelling — the arc of a project, pinned while it plays out.
 export type StoryStep = { n: string; title: string; blurb: string };
 

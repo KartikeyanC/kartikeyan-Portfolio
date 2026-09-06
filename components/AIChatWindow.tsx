@@ -30,13 +30,14 @@ export default function AIChatWindow({ onClose }: { onClose: () => void }) {
 
   useEffect(() => {
     inputRef.current?.focus();
+    const pending = timers.current; // stable array ref; cleared on unmount
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
     document.addEventListener("keydown", onKey);
     return () => {
       document.removeEventListener("keydown", onKey);
-      timers.current.forEach(clearTimeout);
+      pending.forEach(clearTimeout);
     };
   }, [onClose]);
 

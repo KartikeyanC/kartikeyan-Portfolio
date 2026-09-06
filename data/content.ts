@@ -54,18 +54,24 @@ export type Tool = { name: string };
 // ------------------------------------------------------------------
 
 export const site = {
-  name: "Alex Morgan",
-  initials: "AM",
+  name: "Karthikeyan C",
+  initials: "KC",
   role: "Product Designer",
-  email: "hello@alexmorgan.design",
-  bookingLink: "https://cal.com/alexmorgan/intro",
+  roles: [
+    "Product Designer",
+    "UI/UX Designer",
+    "Visual Designer",
+    "Motion Designer",
+  ],
+  email: "hello@karthikeyan.design",
+  bookingLink: "mailto:hello@karthikeyan.design?subject=Let's start a project",
   resumeUrl: "/resume.pdf",
-  location: "Lisbon, remote-first",
+  location: "Remote · worldwide",
   available: true,
   socials: [
     { label: "LinkedIn", href: "https://linkedin.com" },
     { label: "Dribbble", href: "https://dribbble.com" },
-    { label: "Read.cv", href: "https://read.cv" },
+    { label: "Behance", href: "https://behance.net" },
     { label: "X", href: "https://x.com" },
   ],
 };
@@ -73,7 +79,8 @@ export const site = {
 export const nav = [
   { label: "Work", href: "#work" },
   { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
+  { label: "Services", href: "#services" },
+  { label: "Playground", href: "/playground" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -82,11 +89,51 @@ export const nav = [
 // ------------------------------------------------------------------
 
 export const hero = {
-  greeting: "Hi, I'm Alex",
-  headline: "Design that earns its place on the screen.",
+  greeting: "Design in motion",
+  headline:
+    "I design digital products, interfaces and visual experiences that turn complex ideas into clear experiences.",
   supporting:
-    "I'm a product designer partnering with founders and teams to turn fuzzy problems into interfaces people actually finish. Ten years, zero filler.",
+    "Product Designer · UI/UX Designer · Visual Designer · Motion Designer",
 };
+
+// Six design disciplines shown as floating hero artifacts / world sections.
+export type Discipline = { title: string; blurb: string; accent: string };
+
+export const disciplines: Discipline[] = [
+  { title: "Thumbnail Design", blurb: "Scroll-stopping frames that earn the click.", accent: "#FB542B" },
+  { title: "SaaS Animation", blurb: "Interfaces that explain themselves in motion.", accent: "#A3278F" },
+  { title: "Website Design", blurb: "Editorial, fast, and unmistakably yours.", accent: "#4F30AB" },
+  { title: "Mobile App Design", blurb: "Thumb-first flows that feel effortless.", accent: "#FF704D" },
+  { title: "Dashboard Design", blurb: "Dense data made calm and legible.", accent: "#A3278F" },
+  { title: "Logo Design", blurb: "Marks built from a single, sharp idea.", accent: "#FB542B" },
+];
+
+// Services list (Services section).
+export const services: string[] = [
+  "Product Design",
+  "UI/UX Design",
+  "SaaS Design",
+  "Dashboard Design",
+  "Mobile App Design",
+  "Website Design",
+  "Design Systems",
+  "Motion Design",
+  "Logo Design",
+  "UX Audit",
+  "Freelance Design",
+  "Digital Product Consulting",
+];
+
+// Infinite marquee terms.
+export const marqueeTerms: string[] = [
+  "Product Design",
+  "UI/UX",
+  "SaaS",
+  "Motion",
+  "Visual Design",
+  "Design Systems",
+  "Product Thinking",
+];
 
 // ------------------------------------------------------------------
 // SELECTED WORK

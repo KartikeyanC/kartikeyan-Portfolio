@@ -15,7 +15,7 @@ const Hero3D = dynamic(() => import("./Hero3D"), {
 function HeroGradientFallback() {
   return (
     <div aria-hidden="true" className="absolute inset-0 flex items-center justify-center">
-      <div className="h-[70%] w-[70%] rounded-full bg-[radial-gradient(circle_at_35%_30%,#ff7a63,transparent_60%),radial-gradient(circle_at_70%_70%,#5b8def,transparent_55%)] opacity-70 blur-2xl" />
+      <div className="h-[70%] w-[70%] rounded-full bg-[radial-gradient(circle_at_35%_30%,#FF704D,transparent_60%),radial-gradient(circle_at_70%_70%,#A3278F,transparent_55%)] opacity-70 blur-2xl" />
     </div>
   );
 }
@@ -75,24 +75,26 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-sm text-ink-muted">{hero.greeting}</span>
+            <span className="text-xs font-medium uppercase tracking-[0.22em] text-text-muted">
+              {hero.greeting}
+            </span>
             {site.available && (
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-ink-muted">
+              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-white/5 px-3 py-1 text-xs font-medium text-text-secondary">
                 <span className="relative flex h-2 w-2">
                   <span className="absolute inline-flex h-full w-full animate-pulseDot rounded-full bg-emerald-400" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_10px_2px_rgba(52,211,153,0.6)]" />
                 </span>
-                Available for work
+                Available for freelance
               </span>
             )}
           </motion.div>
 
-          <h1 className="mt-6 font-display text-[clamp(2.6rem,7vw,5rem)] font-semibold leading-[1.02] tracking-[-0.02em] text-ink">
+          <h1 className="mt-6 max-w-[16ch] font-display text-[clamp(2rem,5.2vw,4.25rem)] font-semibold leading-[1.05] tracking-[-0.03em] text-text">
             <AnimatedHeadline text={hero.headline} />
           </h1>
 
           <motion.p
-            className="mt-6 max-w-xl text-lg leading-relaxed text-ink-muted"
+            className="mt-7 max-w-xl text-base font-medium tracking-tight text-text-secondary sm:text-lg"
             initial={reduced ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.9 }}
@@ -107,19 +109,21 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 1.05 }}
           >
             <MagneticButton
-              href={site.bookingLink}
-              external
-              className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3.5 text-sm font-medium text-base transition-colors hover:bg-accent-soft"
+              href="#work"
+              className="inline-flex items-center gap-2 rounded-full bg-orange px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-orange-hover"
             >
-              Book a call
+              Explore work
+              <span aria-hidden="true">↓</span>
+            </MagneticButton>
+            <MagneticButton
+              href={site.bookingLink}
+              className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3.5 text-sm font-semibold text-text transition-colors hover:border-text-muted"
+            >
+              Start a project
               <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
                 <path d="M4 11L11 4M11 4H5M11 4V10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </MagneticButton>
-            <a href="#work" className="link-underline inline-flex items-center gap-2 px-1 text-sm font-medium text-ink">
-              View work
-              <span aria-hidden="true">↓</span>
-            </a>
           </motion.div>
         </div>
       </div>

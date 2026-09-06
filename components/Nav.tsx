@@ -74,10 +74,9 @@ export default function Nav() {
               </a>
               <MagneticButton
                 href={site.bookingLink}
-                external
-                className="inline-flex items-center rounded-full bg-accent px-4 py-2 text-sm font-medium text-base transition-colors hover:bg-accent-soft"
+                className="inline-flex items-center rounded-full bg-orange px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-orange-hover"
               >
-                Book a call
+                Start a project
               </MagneticButton>
             </div>
           </div>
@@ -162,11 +161,9 @@ export default function Nav() {
                 </a>
                 <a
                   href={site.bookingLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full bg-accent py-3 text-center text-sm font-medium text-base"
+                  className="rounded-full bg-orange py-3 text-center text-sm font-semibold text-white"
                 >
-                  Book a call
+                  Start a project
                 </a>
               </div>
             </motion.aside>

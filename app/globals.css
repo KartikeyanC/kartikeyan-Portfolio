@@ -27,9 +27,9 @@ html.lenis body {
 }
 
 body {
-  background-color: theme("colors.base.DEFAULT");
-  color: theme("colors.ink.DEFAULT");
-  font-family: var(--font-sans), system-ui, sans-serif;
+  background-color: theme("colors.bg.DEFAULT");
+  color: theme("colors.text.DEFAULT");
+  font-family: var(--font-poppins), system-ui, sans-serif;
   overflow-x: hidden;
 }
 

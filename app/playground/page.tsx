@@ -2,25 +2,38 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/data/content";
 import MagneticButton from "@/components/MagneticButton";
+import GooeyBlob from "@/components/playground/GooeyBlob";
+import LogoMorph from "@/components/playground/LogoMorph";
+import TiltCard from "@/components/playground/TiltCard";
+import TextScramble from "@/components/playground/TextScramble";
 
 export const metadata: Metadata = {
   title: `Playground — ${site.name}`,
   description:
-    "Creative-technology experiments: cursor morphing, liquid SVG, magnetic interaction, and motion studies.",
+    "Creative-technology experiments: liquid SVG, logo construction, 3D tilt, magnetic interaction, and text animation.",
 };
 
-const experiments = [
-  "Morphing cursor",
-  "Liquid SVG",
-  "Logo morph",
-  "Image distortion",
-  "Magnetic button",
-  "Text animation",
-  "Scroll experiment",
-  "3D card",
-  "Particle interaction",
-  "WebGL",
-];
+function Cell({
+  title,
+  hint,
+  children,
+  className = "",
+}: {
+  title: string;
+  hint?: string;
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <div className={`relative flex min-h-[240px] flex-col overflow-hidden rounded-3xl border border-border bg-surface/40 ${className}`}>
+      <div className="flex-1">{children}</div>
+      <div className="flex items-center justify-between border-t border-border px-5 py-3">
+        <span className="text-sm font-medium text-text">{title}</span>
+        {hint && <span className="text-xs text-text-muted">{hint}</span>}
+      </div>
+    </div>
+  );
+}
 
 export default function PlaygroundPage() {
   return (
@@ -44,30 +57,45 @@ export default function PlaygroundPage() {
       </header>
 
       <section className="mx-auto max-w-6xl px-6 pt-32 sm:px-8">
-        <p className="text-xs font-medium uppercase tracking-[0.22em] text-text-muted">
-          Playground
-        </p>
+        <p className="text-xs font-medium uppercase tracking-[0.22em] text-text-muted">Playground</p>
         <h1 className="mt-4 max-w-3xl font-display text-[clamp(2.2rem,6vw,4.5rem)] font-semibold leading-[1.03] tracking-[-0.03em]">
           Where I test <span className="text-orange">creative technology</span>.
         </h1>
         <p className="mt-6 max-w-xl text-lg text-text-secondary">
-          A living lab of interaction and motion experiments. Building these out
-          one at a time — check back as they land.
+          A living lab of interaction and motion experiments. Hover, tilt, and
+          move your cursor — everything here is built from scratch.
         </p>
 
-        <ul className="mt-14 grid grid-cols-1 gap-4 pb-24 sm:grid-cols-2 lg:grid-cols-3">
-          {experiments.map((name) => (
-            <li
-              key={name}
-              className="group flex items-center justify-between rounded-2xl border border-border bg-surface/40 p-6 transition-colors hover:border-orange/60"
-            >
-              <span className="font-medium text-text">{name}</span>
-              <span className="rounded-full border border-border px-2 py-0.5 text-[11px] uppercase tracking-wider text-text-muted">
-                Soon
+        <div className="mt-14 grid grid-cols-1 gap-4 pb-24 sm:grid-cols-2 lg:grid-cols-3">
+          <Cell title="Liquid SVG" hint="gooey filter"><GooeyBlob /></Cell>
+          <Cell title="Logo construction" hint="path draw"><LogoMorph /></Cell>
+          <Cell title="3D tilt card" hint="hover"><TiltCard /></Cell>
+
+          <Cell title="Text scramble" hint="hover">
+            <div className="flex h-full items-center justify-center">
+              <TextScramble text="EXPLORE" />
+            </div>
+          </Cell>
+
+          <Cell title="Magnetic button" hint="hover">
+            <div className="flex h-full items-center justify-center">
+              <MagneticButton
+                strength={0.5}
+                className="inline-flex items-center rounded-full bg-orange px-7 py-4 text-sm font-semibold text-white"
+              >
+                Pull me
+              </MagneticButton>
+            </div>
+          </Cell>
+
+          <Cell title="Morphing cursor" hint="desktop">
+            <div className="flex h-full items-center justify-center" data-cursor="Playground">
+              <span className="max-w-[12rem] text-center text-sm text-text-secondary">
+                Move your cursor across this card — it morphs to a label.
               </span>
-            </li>
-          ))}
-        </ul>
+            </div>
+          </Cell>
+        </div>
       </section>
     </main>
   );

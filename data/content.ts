@@ -18,10 +18,15 @@ export type Project = {
     role: string;
     timeline: string;
     hero: string;
+    context?: string;
     problem: string;
+    research?: string[];
     process: string[];
+    designSystem?: string;
     solution: string;
+    motion?: string;
     outcome: { label: string; value: string }[];
+    learning?: string;
     gallery: string[];
   };
 };
@@ -183,6 +188,19 @@ export const projects: Project[] = [
       role: "Lead Product Designer",
       timeline: "6 months · 2025",
       hero: "/images/northwind-hero.svg",
+      context:
+        "Northwind is a regional bank with 4M mobile users and a decade of feature accretion. The app worked, technically — but every release added another tab, and satisfaction kept sliding.",
+      research: [
+        "14 unmoderated task tests surfaced where people stalled — five real jobs accounted for most sessions.",
+        "Support-ticket mining showed 'where is my transfer' was the single biggest driver of contacts.",
+        "Diary studies revealed people opened the app anxious and left unsure the task had worked.",
+      ],
+      designSystem:
+        "A token-based system (color, type, spacing, elevation) feeding shared components across iOS, Android, and web — so the redesign shipped once and stayed consistent as teams built on it.",
+      motion:
+        "Money-movement got deliberate motion: a confirm state that animates the amount into place and a receipt that settles, so people feel the transfer land.",
+      learning:
+        "The win wasn't new features — it was subtraction. Cutting the dashboard-of-everything did more for satisfaction than anything we added.",
       problem:
         "Northwind's mobile app was a menu of features nobody asked for. Support tickets were dominated by people who couldn't find the one thing they opened the app to do — move money and check that it landed.",
       process: [
@@ -214,6 +232,18 @@ export const projects: Project[] = [
       role: "Founding Designer",
       timeline: "9 months · 2024",
       hero: "/images/atlas-hero.svg",
+      context:
+        "Atlas was a seed-stage analytics startup with strong data infrastructure and a UI that only its founders could navigate. I was the first designer.",
+      research: [
+        "Shadowed 12 analysts to learn the questions they bring to their data.",
+        "Mapped the six-click path to a first insight — and where new users gave up.",
+      ],
+      designSystem:
+        "A charting library with accessible color, sensible defaults, and progressive disclosure so power stayed available without crowding the first run.",
+      motion:
+        "Query results animate in as they resolve, so the canvas feels like a conversation rather than a page reload.",
+      learning:
+        "Framing the product around questions instead of charts was the unlock — the same data, finally legible.",
       problem:
         "Atlas had powerful data under the hood and an interface that hid it behind six clicks and a wall of jargon. New users churned before their first insight.",
       process: [
@@ -245,6 +275,18 @@ export const projects: Project[] = [
       role: "Product & Brand Designer",
       timeline: "4 months · 2024",
       hero: "/images/verdant-hero.svg",
+      context:
+        "Verdant is a consumer app for tracking personal carbon impact — a category people download with good intentions and delete out of guilt.",
+      research: [
+        "Studied habit-forming products outside the category for what actually brings people back.",
+        "Tested tone: judgemental framing tanked retention; encouragement kept people returning.",
+      ],
+      designSystem:
+        "A warm, tactile identity — rounded forms, optimistic color, and celebratory micro-states — that reads as encouraging rather than preachy.",
+      motion:
+        "Small wins get small celebrations: a streak tick, a gentle confetti burst — earned, never nagging.",
+      learning:
+        "Encouragement out-performed guilt on every retention metric. Tone was the product decision that mattered most.",
       problem:
         "Sustainability apps guilt-trip people into deleting them. Verdant needed to make progress feel earned and habitual, not shameful.",
       process: [

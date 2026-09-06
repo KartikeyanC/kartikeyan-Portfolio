@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1050" viewBox="0 0 1400 1050">
+  <defs>
+    <radialGradient id="g1q8fg2t" cx="30%" cy="28%" r="75%">
+      <stop offset="0%" stop-color="#3fae7a" stop-opacity="0.95"/>
+      <stop offset="55%" stop-color="#3fae7a" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0a0a0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2q8fg2t" cx="78%" cy="82%" r="70%">
+      <stop offset="0%" stop-color="#e8a13f" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#e8a13f" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#0a0a0b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="g3q8fg2t" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#151517"/>
+      <stop offset="100%" stop-color="#0a0a0b"/>
+    </linearGradient>
+    <filter id="bq8fg2t"><feGaussianBlur stdDeviation="54"/></filter>
+  </defs>
+  <rect width="1400" height="1050" fill="url(#g3q8fg2t)"/>
+  <g filter="url(#bq8fg2t)">
+    <rect width="1400" height="1050" fill="url(#g1q8fg2t)"/>
+    <rect width="1400" height="1050" fill="url(#g2q8fg2t)"/>
+    <circle cx="924" cy="357" r="224" fill="#f4f2ee" opacity="0.05"/>
+  </g>
+  
+  <circle cx="700" cy="483" r="189" fill="none" stroke="#f4f2ee" stroke-opacity="0.14" stroke-width="1.5"/>
+  <text x="700" y="493.5" text-anchor="middle" dominant-baseline="central"
+    font-family="Georgia, 'Times New Roman', serif" font-size="105"
+    font-weight="600" fill="#f4f2ee" fill-opacity="0.92">Verdant · 02</text>
+  <text x="700" y="577.5" text-anchor="middle" dominant-baseline="central"
+    font-family="ui-monospace, monospace" font-size="24"
+    letter-spacing="8" fill="#f4f2ee" fill-opacity="0.4">CASE STUDY · PLACEHOLDER</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
+  <defs>
+    <radialGradient id="g18dfwb1" cx="30%" cy="28%" r="75%">
+      <stop offset="0%" stop-color="#5b8def" stop-opacity="0.95"/>
+      <stop offset="55%" stop-color="#5b8def" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0a0a0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g28dfwb1" cx="78%" cy="82%" r="70%">
+      <stop offset="0%" stop-color="#b57edc" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#b57edc" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#0a0a0b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="g38dfwb1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#151517"/>
+      <stop offset="100%" stop-color="#0a0a0b"/>
+    </linearGradient>
+    <filter id="b8dfwb1"><feGaussianBlur stdDeviation="62"/></filter>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#g38dfwb1)"/>
+  <g filter="url(#b8dfwb1)">
+    <rect width="1600" height="1200" fill="url(#g18dfwb1)"/>
+    <rect width="1600" height="1200" fill="url(#g28dfwb1)"/>
+    <circle cx="1056" cy="408.00000000000006" r="256" fill="#f4f2ee" opacity="0.05"/>
+  </g>
+  <g stroke="#f4f2ee" stroke-opacity="0.06" stroke-width="1">
+          <line x1="0" y1="171.42857142857142" x2="1600" y2="171.42857142857142"/><line x1="0" y1="342.85714285714283" x2="1600" y2="342.85714285714283"/><line x1="0" y1="514.2857142857142" x2="1600" y2="514.2857142857142"/><line x1="0" y1="685.7142857142857" x2="1600" y2="685.7142857142857"/><line x1="0" y1="857.1428571428571" x2="1600" y2="857.1428571428571"/><line x1="0" y1="1028.5714285714284" x2="1600" y2="1028.5714285714284"/><line x1="0" y1="1200" x2="1600" y2="1200"/>
+          <line x1="160" y1="0" x2="160" y2="1200"/><line x1="320" y1="0" x2="320" y2="1200"/><line x1="480" y1="0" x2="480" y2="1200"/><line x1="640" y1="0" x2="640" y2="1200"/><line x1="800" y1="0" x2="800" y2="1200"/><line x1="960" y1="0" x2="960" y2="1200"/><line x1="1120" y1="0" x2="1120" y2="1200"/><line x1="1280" y1="0" x2="1280" y2="1200"/><line x1="1440" y1="0" x2="1440" y2="1200"/><line x1="1600" y1="0" x2="1600" y2="1200"/>
+        </g>
+  <circle cx="800" cy="552" r="216" fill="none" stroke="#f4f2ee" stroke-opacity="0.14" stroke-width="1.5"/>
+  <text x="800" y="564" text-anchor="middle" dominant-baseline="central"
+    font-family="Georgia, 'Times New Roman', serif" font-size="120"
+    font-weight="600" fill="#f4f2ee" fill-opacity="0.92">Atlas</text>
+  <text x="800" y="660" text-anchor="middle" dominant-baseline="central"
+    font-family="ui-monospace, monospace" font-size="27"
+    letter-spacing="10" fill="#f4f2ee" fill-opacity="0.4">CASE STUDY · PLACEHOLDER</text>
+</svg>

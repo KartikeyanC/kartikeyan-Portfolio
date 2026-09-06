@@ -13,7 +13,8 @@ export default function About() {
           <Reveal className="lg:col-span-5">
             <p className="eyebrow">About</p>
             <h2 className="mt-4 font-display text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-tight tracking-[-0.02em] text-ink">
-              I make the right thing the easy thing.
+              I like solving complicated problems and turning them into simple
+              experiences.
             </h2>
           </Reveal>
 

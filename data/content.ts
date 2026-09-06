@@ -329,7 +329,7 @@ export const experience: Experience[] = [
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Alex has the rare gift of making the hard decision look obvious in hindsight. Our activation numbers still haven't come back down.",
+      "Karthikeyan has the rare gift of making the hard decision look obvious in hindsight. Our activation numbers still haven't come back down.",
     author: "Priya Nair",
     title: "VP Product, Atlas",
   },

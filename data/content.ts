@@ -124,6 +124,17 @@ export const services: string[] = [
   "Digital Product Consulting",
 ];
 
+// Sticky storytelling — the arc of a project, pinned while it plays out.
+export type StoryStep = { n: string; title: string; blurb: string };
+
+export const storySteps: StoryStep[] = [
+  { n: "01", title: "Research", blurb: "Interviews, flows, and the questions people actually bring to the product." },
+  { n: "02", title: "Define", blurb: "Turning noise into a sharp problem statement and the jobs to be done." },
+  { n: "03", title: "Wireframe", blurb: "Low-fidelity structure — deciding what goes where, and why, before pixels." },
+  { n: "04", title: "Design System", blurb: "Tokens, components, and rules so the product stays coherent as it scales." },
+  { n: "05", title: "Final UI", blurb: "The polished, shipped interface — every state, every edge, resolved." },
+];
+
 // Infinite marquee terms.
 export const marqueeTerms: string[] = [
   "Product Design",

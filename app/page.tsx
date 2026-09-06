@@ -2,6 +2,9 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import ProjectGrid from "@/components/ProjectGrid";
 import Disciplines from "@/components/Disciplines";
+import HorizontalGallery from "@/components/HorizontalGallery";
+import StickyStory from "@/components/StickyStory";
+import ProductAssembly from "@/components/ProductAssembly";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
 import WhyMe from "@/components/WhyMe";
@@ -21,6 +24,9 @@ export default function Home() {
         <Hero />
         <ProjectGrid />
         <Disciplines />
+        <HorizontalGallery />
+        <StickyStory />
+        <ProductAssembly />
         <About />
         <WhyMe />
         <Experience />

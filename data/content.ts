@@ -96,7 +96,7 @@ export const nav = [
 export const hero = {
   greeting: "Design in motion",
   headline:
-    "I design digital products, interfaces and visual experiences that turn complex ideas into clear experiences.",
+    "I design digital products, interfaces, and the motion that brings them to life.",
   supporting:
     "Product Designer · UI/UX Designer · Visual Designer · Motion Designer",
 };
@@ -172,7 +172,7 @@ export const marqueeTerms: string[] = [
 // ------------------------------------------------------------------
 
 export const workIntro =
-  "A few things I've shipped lately — end-to-end product work, from first sketch to the version real people use.";
+  "Selected work, shipped end to end — from the first sketch to the version people actually use every day.";
 
 export const projects: Project[] = [
   {
@@ -332,8 +332,8 @@ export const projects: Project[] = [
 
 export const about = {
   bio: [
-    "I design products end to end — research, interaction, visual, and the systems that keep it all coherent as teams grow. I care most about the boring parts that make software feel effortless: the empty state, the error, the second visit.",
-    "Before design I studied cognitive science, which is a long way of saying I'm fascinated by why people do what they do in front of a screen — and how a well-placed decision can make the right thing the easy thing.",
+    "I design products end to end — research, interaction, visual design, and the systems that hold it all together as teams grow. The parts I care about most are the ones nobody notices: the empty state, the error, the tenth time someone opens the app.",
+    "Before design, I studied cognitive science — a long way of saying I'm obsessed with why people do what they do in front of a screen, and how one well-placed decision can make the right thing the easy thing.",
   ],
   stats: [
     { label: "Years designing", value: 10, suffix: "+" },
@@ -477,5 +477,5 @@ export const faq: FaqItem[] = [
 export const contact = {
   headline: "Let's make something worth shipping.",
   supporting:
-    "Have a problem that's been sitting in the too-hard pile? That's usually where the good work is. Tell me about it.",
+    "Got a problem stuck in the too-hard pile? That's usually where the best work is hiding. Tell me about it.",
 };

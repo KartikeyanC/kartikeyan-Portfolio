@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { disciplines } from "@/data/content";
 import Reveal from "./Reveal";
+import { springTransition } from "@/lib/motion";
 
 /**
  * Six Design Disciplines — the worlds Karthikeyan designs across. Each card
@@ -28,7 +29,7 @@ export default function Disciplines() {
             <Reveal key={d.title} delay={(i % 3) * 0.08}>
               <motion.div
                 whileHover={{ y: -6 }}
-                transition={{ type: "spring", stiffness: 300, damping: 24 }}
+                transition={springTransition("gentle")}
                 data-cursor="Explore"
                 className="group relative h-full overflow-hidden rounded-3xl border border-border bg-surface/40 p-8"
               >

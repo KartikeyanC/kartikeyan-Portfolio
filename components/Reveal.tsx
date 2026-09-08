@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { usePrefersReducedMotion } from "@/lib/hooks";
+import { DURATION, EASE } from "@/lib/motion";
 
 type RevealTag = "div" | "section" | "li" | "span";
 
@@ -40,7 +41,7 @@ export default function Reveal({
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: DURATION.slow - 0.2, delay, ease: EASE.editorial }}
     >
       {children}
     </MotionTag>

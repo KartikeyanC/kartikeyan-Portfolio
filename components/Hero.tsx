@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { hero, site } from "@/data/content";
 import { usePrefersReducedMotion, useIsDesktop } from "@/lib/hooks";
+import { textWord } from "@/lib/motion";
 import MagneticButton from "./MagneticButton";
 import ErrorBoundary from "./ErrorBoundary";
 
@@ -39,7 +40,7 @@ function AnimatedHeadline({ text }: { text: string }) {
             className="inline-block"
             initial={{ y: "110%", filter: "blur(8px)", opacity: 0 }}
             animate={{ y: "0%", filter: "blur(0px)", opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.35 + i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+            transition={textWord(i)}
           >
             {word}
           </motion.span>

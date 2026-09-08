@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import type { Project } from "@/data/content";
 import { usePrefersReducedMotion, useIsDesktop } from "@/lib/hooks";
+import { DURATION, EASE, SPRING, springTransition } from "@/lib/motion";
 
 /**
  * Tilt-card: image scales and the card tilts in 3D tracking the cursor.
@@ -28,8 +29,8 @@ export default function ProjectCard({
 
   const rotX = useMotionValue(0);
   const rotY = useMotionValue(0);
-  const springX = useSpring(rotX, { stiffness: 200, damping: 20 });
-  const springY = useSpring(rotY, { stiffness: 200, damping: 20 });
+  const springX = useSpring(rotX, SPRING.soft);
+  const springY = useSpring(rotY, SPRING.soft);
 
   const onMove = (e: React.MouseEvent) => {
     if (!tiltEnabled || !ref.current) return;
@@ -99,7 +100,7 @@ export default function ProjectCard({
           <motion.span
             className="text-orange"
             animate={{ x: hovered ? 4 : 0, y: hovered ? -4 : 0 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            transition={springTransition("snappy")}
             aria-hidden="true"
           >
             ↗
@@ -124,7 +125,7 @@ export default function ProjectCard({
       initial={reduced ? false : { opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.7, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: DURATION.slow - 0.2, delay: index * 0.1, ease: EASE.editorial }}
       className="h-full"
     >
       {isExternal ? (

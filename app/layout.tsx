@@ -6,6 +6,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
 import Preloader from "@/components/Preloader";
 import AskAI from "@/components/AskAI";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -45,6 +46,7 @@ export default function RootLayout({
         <Preloader />
         <SmoothScroll />
         <CustomCursor />
+        <ScrollProgress />
         <div className="grain-overlay" aria-hidden="true" />
         {children}
         <AskAI />

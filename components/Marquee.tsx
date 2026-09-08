@@ -1,28 +1,26 @@
 "use client";
 
-import { tools } from "@/data/content";
+import { marqueeTerms } from "@/data/content";
 
 /**
- * Seamless infinite marquee of tool names. The track is duplicated and
- * translated -50%, so the loop is continuous. Pauses on hover.
+ * Seamless infinite marquee of discipline terms. Track duplicated and
+ * translated -50% for a continuous loop; pauses on hover.
  */
 export default function Marquee() {
-  const items = [...tools, ...tools];
+  const items = [...marqueeTerms, ...marqueeTerms];
 
   return (
     <div
-      className="group relative flex overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_12%,#000_88%,transparent)]"
-      aria-label="Tools I work with"
+      className="group relative flex overflow-hidden border-y border-border py-5 [mask-image:linear-gradient(90deg,transparent,#000_10%,#000_90%,transparent)]"
+      aria-label="Disciplines"
     >
-      <div className="flex shrink-0 animate-marquee items-center gap-4 pr-4 group-hover:[animation-play-state:paused]">
-        {items.map((tool, i) => (
-          <span
-            key={i}
-            className="flex items-center gap-3 whitespace-nowrap rounded-full border border-white/10 bg-base-soft px-6 py-3 text-ink-muted"
-            aria-hidden={i >= tools.length ? "true" : undefined}
-          >
-            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            <span className="text-base font-medium">{tool.name}</span>
+      <div className="flex shrink-0 animate-marquee items-center gap-8 pr-8 group-hover:[animation-play-state:paused]">
+        {items.map((term, i) => (
+          <span key={i} className="flex items-center gap-8" aria-hidden={i >= marqueeTerms.length ? "true" : undefined}>
+            <span className="font-display text-2xl font-semibold tracking-tight text-text sm:text-3xl">
+              {term}
+            </span>
+            <span className="text-orange" aria-hidden="true">✦</span>
           </span>
         ))}
       </div>

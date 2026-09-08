@@ -32,7 +32,7 @@ export default function Nav() {
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
         className={`fixed inset-x-0 top-0 z-[120] transition-[background-color,backdrop-filter,border-color] duration-500 ${
           scrolled
-            ? "border-b border-white/10 bg-base/70 backdrop-blur-xl"
+            ? "border-b border-border bg-bg/70 backdrop-blur-xl"
             : "border-b border-transparent bg-transparent"
         }`}
       >
@@ -41,10 +41,10 @@ export default function Nav() {
           aria-label="Primary"
         >
           <Link href="/#top" className="group flex items-center gap-2.5" aria-label={`${site.name} — home`}>
-            <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 font-display text-sm font-semibold text-ink transition-colors group-hover:border-accent group-hover:text-accent">
+            <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 font-display text-sm font-semibold text-text transition-colors group-hover:border-orange group-hover:text-orange">
               {site.initials}
             </span>
-            <span className="hidden text-sm font-medium tracking-tight text-ink sm:block">
+            <span className="hidden text-sm font-medium tracking-tight text-text sm:block">
               {site.name}
             </span>
           </Link>
@@ -55,7 +55,7 @@ export default function Nav() {
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    className="link-underline text-sm text-ink-muted transition-colors hover:text-ink"
+                    className="link-underline text-sm text-text-secondary transition-colors hover:text-text"
                   >
                     {item.label}
                   </a>
@@ -68,16 +68,16 @@ export default function Nav() {
                 href={site.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="link-underline text-sm text-ink-muted transition-colors hover:text-ink"
+                data-cursor="Download"
+                className="link-underline text-sm text-text-secondary transition-colors hover:text-text"
               >
                 Resume
               </a>
               <MagneticButton
                 href={site.bookingLink}
-                external
-                className="inline-flex items-center rounded-full bg-accent px-4 py-2 text-sm font-medium text-base transition-colors hover:bg-accent-soft"
+                className="inline-flex items-center rounded-full bg-orange px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-orange-hover"
               >
-                Book a call
+                Start a project
               </MagneticButton>
             </div>
           </div>
@@ -85,14 +85,14 @@ export default function Nav() {
           <button
             type="button"
             onClick={() => setOpen(true)}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-ink md:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-text md:hidden"
             aria-label="Open menu"
             aria-expanded={open}
           >
             <span className="sr-only">Open menu</span>
             <div className="space-y-1.5">
-              <span className="block h-px w-5 bg-ink" />
-              <span className="block h-px w-5 bg-ink" />
+              <span className="block h-px w-5 bg-text" />
+              <span className="block h-px w-5 bg-text" />
             </div>
           </button>
         </nav>
@@ -109,7 +109,7 @@ export default function Nav() {
               onClick={() => setOpen(false)}
             />
             <motion.aside
-              className="fixed inset-y-0 right-0 z-[140] flex w-[82%] max-w-sm flex-col bg-base-soft p-6 md:hidden"
+              className="fixed inset-y-0 right-0 z-[140] flex w-[82%] max-w-sm flex-col bg-surface p-6 md:hidden"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
@@ -123,7 +123,7 @@ export default function Nav() {
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-ink"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-text"
                   aria-label="Close menu"
                 >
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -143,7 +143,7 @@ export default function Nav() {
                     <a
                       href={item.href}
                       onClick={() => setOpen(false)}
-                      className="block py-3 font-display text-3xl text-ink"
+                      className="block py-3 font-display text-3xl text-text"
                     >
                       {item.label}
                     </a>
@@ -156,17 +156,15 @@ export default function Nav() {
                   href={site.resumeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full border border-white/15 py-3 text-center text-sm font-medium text-ink"
+                  className="rounded-full border border-white/15 py-3 text-center text-sm font-medium text-text"
                 >
                   Resume
                 </a>
                 <a
                   href={site.bookingLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full bg-accent py-3 text-center text-sm font-medium text-base"
+                  className="rounded-full bg-orange py-3 text-center text-sm font-semibold text-white"
                 >
-                  Book a call
+                  Start a project
                 </a>
               </div>
             </motion.aside>

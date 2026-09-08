@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --accent: #e8563f;
+  --accent: #fb542b;
 }
 
 * {
@@ -27,9 +27,9 @@ html.lenis body {
 }
 
 body {
-  background-color: theme("colors.base.DEFAULT");
-  color: theme("colors.ink.DEFAULT");
-  font-family: var(--font-sans), system-ui, sans-serif;
+  background-color: theme("colors.bg.DEFAULT");
+  color: theme("colors.text.DEFAULT");
+  font-family: var(--font-poppins), system-ui, sans-serif;
   overflow-x: hidden;
 }
 
@@ -47,7 +47,33 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #2a2a2e;
   border-radius: 999px;
-  border: 3px solid theme("colors.base.DEFAULT");
+  border: 3px solid theme("colors.bg.DEFAULT");
+}
+
+/* Visible focus for keyboard users (not on mouse click) */
+:focus-visible {
+  outline: 2px solid theme("colors.orange.DEFAULT");
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Skip-to-content link, revealed on focus */
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 400;
+  transform: translateY(-150%);
+  transition: transform 0.2s ease;
+  background: theme("colors.orange.DEFAULT");
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.skip-link:focus {
+  transform: translateY(0);
 }
 
 @layer components {
@@ -56,7 +82,7 @@ body {
   }
 
   .eyebrow {
-    @apply text-xs font-medium uppercase tracking-[0.22em] text-ink-faint;
+    @apply text-xs font-medium uppercase tracking-[0.22em] text-text-muted;
   }
 
   .link-underline {

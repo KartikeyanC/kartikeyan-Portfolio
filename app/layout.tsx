@@ -1,26 +1,22 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { site } from "@/data/content";
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
 import Preloader from "@/components/Preloader";
+import AskAI from "@/components/AskAI";
+import ScrollProgress from "@/components/ScrollProgress";
 
-const display = Fraunces({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
-  axes: ["opsz"],
-});
-
-const sans = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://alexmorgan.design"),
+  metadataBase: new URL("https://karthikeyan.design"),
   title: `${site.name} — ${site.role}`,
   description: `${site.name} is a ${site.role.toLowerCase()} turning fuzzy problems into interfaces people actually finish.`,
   openGraph: {
@@ -42,13 +38,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${sans.variable}`}>
+    <html lang="en" className={poppins.variable}>
       <body>
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
         <Preloader />
         <SmoothScroll />
         <CustomCursor />
+        <ScrollProgress />
         <div className="grain-overlay" aria-hidden="true" />
         {children}
+        <AskAI />
       </body>
     </html>
   );

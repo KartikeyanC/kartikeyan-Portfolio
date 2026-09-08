@@ -45,11 +45,11 @@ export default function Preloader() {
     <AnimatePresence>
       {show && (
         <motion.div
-          className="fixed inset-0 z-[300] flex items-center justify-center bg-base"
+          className="fixed inset-0 z-[300] flex items-center justify-center bg-bg"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, transition: { duration: 0.6, ease: "easeInOut" } }}
         >
-          <motion.svg width="120" height="120" viewBox="0 0 120 120" className="text-accent">
+          <motion.svg width="120" height="120" viewBox="0 0 120 120" className="text-orange">
             <motion.circle
               cx="60"
               cy="60"

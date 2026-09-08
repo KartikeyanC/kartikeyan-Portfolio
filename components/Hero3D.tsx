@@ -32,11 +32,11 @@ function Blob() {
       <mesh ref={mesh} scale={2.1}>
         <icosahedronGeometry args={[1, 24]} />
         <MeshDistortMaterial
-          color="#e8563f"
-          emissive="#c23f2b"
-          emissiveIntensity={0.15}
-          roughness={0.28}
-          metalness={0.55}
+          color="#FB542B"
+          emissive="#A3278F"
+          emissiveIntensity={0.2}
+          roughness={0.25}
+          metalness={0.6}
           distort={0.42}
           speed={1.6}
         />
@@ -57,13 +57,13 @@ export default function Hero3D() {
       <Suspense fallback={null}>
         <ambientLight intensity={0.6} />
         <directionalLight position={[3, 4, 5]} intensity={2.2} />
-        <directionalLight position={[-5, -2, -3]} intensity={0.8} color="#5b8def" />
+        <directionalLight position={[-5, -2, -3]} intensity={0.9} color="#A3278F" />
         <Blob />
         {/* Procedural environment for metallic reflections — no external HDR
             fetch, so it never depends on (or is blocked by) a remote CDN. */}
         <Environment resolution={256}>
-          <Lightformer form="rect" intensity={2} color="#ff7a63" position={[3, 2, 4]} scale={[6, 6, 1]} />
-          <Lightformer form="rect" intensity={1.2} color="#5b8def" position={[-4, -1, 2]} scale={[5, 5, 1]} />
+          <Lightformer form="rect" intensity={2.2} color="#FF704D" position={[3, 2, 4]} scale={[6, 6, 1]} />
+          <Lightformer form="rect" intensity={1.3} color="#4F30AB" position={[-4, -1, 2]} scale={[5, 5, 1]} />
           <Lightformer form="ring" intensity={1.5} color="#ffffff" position={[0, 3, -3]} scale={[4, 4, 1]} />
         </Environment>
       </Suspense>

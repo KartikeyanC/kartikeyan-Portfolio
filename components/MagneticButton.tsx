@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { usePrefersReducedMotion, useIsDesktop } from "@/lib/hooks";
+import { SPRING } from "@/lib/motion";
 
 type MagneticButtonProps = {
   children: React.ReactNode;
@@ -34,8 +35,8 @@ export default function MagneticButton({
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const springX = useSpring(x, { stiffness: 300, damping: 20, mass: 0.5 });
-  const springY = useSpring(y, { stiffness: 300, damping: 20, mass: 0.5 });
+  const springX = useSpring(x, SPRING.snappy);
+  const springY = useSpring(y, SPRING.snappy);
 
   const handleMove = (e: React.MouseEvent) => {
     if (!magnetic || !ref.current) return;

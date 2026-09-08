@@ -12,21 +12,22 @@ export default function About() {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <Reveal className="lg:col-span-5">
             <p className="eyebrow">About</p>
-            <h2 className="mt-4 font-display text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-tight tracking-[-0.02em] text-ink">
-              I make the right thing the easy thing.
+            <h2 className="mt-4 font-display text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-tight tracking-[-0.02em] text-text">
+              I like solving complicated problems and turning them into simple
+              experiences.
             </h2>
           </Reveal>
 
           <div className="space-y-6 lg:col-span-7">
             {about.bio.map((para, i) => (
               <Reveal key={i} delay={i * 0.1}>
-                <p className="text-lg leading-relaxed text-ink-muted">{para}</p>
+                <p className="text-lg leading-relaxed text-text-secondary">{para}</p>
               </Reveal>
             ))}
           </div>
         </div>
 
-        <div className="mt-20 grid grid-cols-2 gap-8 border-y border-white/10 py-12 sm:grid-cols-4">
+        <div className="mt-20 grid grid-cols-2 gap-8 border-y border-border py-12 sm:grid-cols-4">
           {about.stats.map((stat, i) => (
             <Reveal key={stat.label} delay={i * 0.08}>
               <StatCounter stat={stat} />

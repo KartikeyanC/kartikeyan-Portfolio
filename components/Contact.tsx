@@ -39,32 +39,32 @@ export default function Contact() {
   return (
     <section id="contact" className="relative scroll-mt-24 py-24 sm:py-30">
       <div className="container-editorial">
-        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-base-soft px-6 py-20 text-center sm:px-16">
+        <div className="relative overflow-hidden rounded-3xl border border-border bg-surface px-6 py-20 text-center sm:px-16">
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute -top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-accent/20 blur-[120px]"
+            className="pointer-events-none absolute -top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-orange/20 blur-[120px]"
           />
           <div className="relative">
             <p className="eyebrow">Contact</p>
-            <h2 className="mx-auto mt-5 max-w-3xl font-display text-[clamp(2.2rem,6vw,4.25rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-ink">
+            <h2 className="mx-auto mt-5 max-w-3xl font-display text-[clamp(2.2rem,6vw,4.25rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-text">
               <AnimatedHeadline text={contact.headline} />
             </h2>
             <Reveal delay={0.15}>
-              <p className="mx-auto mt-6 max-w-xl text-lg text-ink-muted">{contact.supporting}</p>
+              <p className="mx-auto mt-6 max-w-xl text-lg text-text-secondary">{contact.supporting}</p>
             </Reveal>
 
             <Reveal delay={0.25}>
               <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
                 <MagneticButton
                   href={`mailto:${site.email}`}
-                  className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-4 text-sm font-medium text-base transition-colors hover:bg-accent-soft"
+                  className="inline-flex items-center gap-2 rounded-full bg-orange px-7 py-4 text-sm font-medium text-white transition-colors hover:bg-orange-hover"
                 >
                   Email me
                 </MagneticButton>
                 <MagneticButton
                   href={site.bookingLink}
                   external
-                  className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-4 text-sm font-medium text-ink transition-colors hover:border-white/30"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-4 text-sm font-medium text-text transition-colors hover:border-white/30"
                 >
                   Book a call
                 </MagneticButton>
@@ -72,7 +72,7 @@ export default function Contact() {
             </Reveal>
 
             <Reveal delay={0.35}>
-              <a href={`mailto:${site.email}`} className="link-underline mt-8 inline-block text-ink-muted">
+              <a href={`mailto:${site.email}`} data-cursor="Let's talk" className="link-underline mt-8 inline-block text-text-secondary">
                 {site.email}
               </a>
             </Reveal>
